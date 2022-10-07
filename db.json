@@ -1,3 +1,9 @@
 {
-  "books": []
+  "books": [
+    {
+      "id": "3755c11e-406e-413c-97ab-63c3b3270c17",
+      "description": "love book",
+      "author": "Stefan Zweig"
+    }
+  ]
 }

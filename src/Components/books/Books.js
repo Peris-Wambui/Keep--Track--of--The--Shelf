@@ -3,9 +3,9 @@ import React from "react";
 function Book({book}) {
     return(
         <tr>
-            <td>{book.}</td>
-            <td></td>
-            <td></td>
+            <td>{book.bookName}</td>
+            <td>{book.description}</td>
+            <td>{book.author}</td>
         </tr>
     )
 }
