@@ -2,10 +2,14 @@ import React, { useState } from 'react'
 import { v4 as uuid } from 'uuid'
 
 function AddBookForm() {
+    const [bookName, setBookName] =('')
     const [description, setDescription] = useState('')
     const [author, setAuthor] = useState('')
-    const [bookName, setBookName] =('')
+   
     
+  const handleNameChange = (event) => {
+     setBookName(event.target.value)
+    }
 
   const handleDescriptionChange = (event) => {
     setDescription(event.target.value)
@@ -15,16 +19,12 @@ function AddBookForm() {
     setAuthor(event.target.value)
   }
 
-  const handleNameChange = (event) => {
-    setBookName(event.target.value)
-  }
-
 
   const handleChange = (e) => {
     e.preventDefault()
     const newBook = {
       id: uuid(),
-      bookName:bookName,
+      bookName: bookName,
       description: description,
       author:author
     

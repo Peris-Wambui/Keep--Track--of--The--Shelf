@@ -16,7 +16,7 @@ function BookContainer() {
     },[])
     
     const searchFilteredBook=(e) =>{
-        setSearchBook(e.targert.value)
+        setSearchBook(e.target.value)
     }
 
     const dispaySearchBook =books.filter((book)=>

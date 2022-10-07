@@ -1,6 +1,6 @@
 import React from "react";
 
-function Book({book}) {
+function Books({book}) {
     return(
         <tr>
             <td>{book.bookName}</td>
@@ -11,4 +11,4 @@ function Book({book}) {
 }
 
 
-export default Book;
+export default Books;
