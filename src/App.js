@@ -6,7 +6,7 @@ function App() {
   return (
     <div className="ui raised segment">
       <div className="ui segment violet inverted">
-        <h2 className="h2App">Keep Track of The Shelf </h2>
+        <h2 >Keep Track of The Shelf </h2>
       </div>
       <BookContainer />
     </div>

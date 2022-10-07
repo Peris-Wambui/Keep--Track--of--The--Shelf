@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { v4 as uuid } from 'uuid'
 
-function AddBooks() {
+function AddBookForm() {
     const [description, setDescription] = useState('')
     const [author, setAuthor] = useState('')
     const [bookName, setBookName] =('')
@@ -78,4 +78,4 @@ function AddBooks() {
 }
 
 
-export default AddBooks;
+export default AddBookForm;

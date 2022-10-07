@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-
+import AddBookForm from '../addbooks/AddBookForm'
 
 
 function BookContainer() {
@@ -12,6 +12,12 @@ function BookContainer() {
             setBooks(data)
         })
     },[])
+
+    return(
+        <div>
+            <AddBookForm/>
+        </div>
+    )
 
 }
 export default BookContainer;
