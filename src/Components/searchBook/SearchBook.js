@@ -1,6 +1,6 @@
 import React from 'react'
 
-function SerchBook() {
+function SearchBook({search,onSearchChange}) {
     return (
         <div className='ui large fluid icon input'>
           <input
@@ -15,4 +15,4 @@ function SerchBook() {
 }
 
 
-export default SerchBook;
+export default SearchBook;
