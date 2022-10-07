@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { v4 as uuid } from 'uuid'
 
 function AddBookForm() {
-    const [bookName, setBookName] =('')
+    const [bookName, setBookName] = useState('')
     const [description, setDescription] = useState('')
     const [author, setAuthor] = useState('')
    
@@ -29,7 +29,7 @@ function AddBookForm() {
       author:author
     
     }
-    fetch('http://localhost:8001/books', {
+    fetch('https://keeping-track-of-my-shelf.herokuapp.com/books', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
