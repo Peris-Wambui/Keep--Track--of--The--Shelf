@@ -13,14 +13,18 @@ function BookContainer() {
             setBooks(data)
         })
     },[])
-
+    
+    const searchFilteredBook=(e) =>{
+        setSearchBook(e.targert.value)
+    }
     const dispaySearchBook =books.filter((book)=>
-    book.description.toLowerCase().includes(searchBook.toLowerCase))
+    book.description.toLowerCase())
 
     return(
         <div>
             <AddBookForm/>
-            {/* <BookList/> */}
+            <BookList 
+            book={dispaySearchBook}/>
         </div>
     )
 
