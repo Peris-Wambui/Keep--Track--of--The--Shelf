@@ -47,6 +47,7 @@ function AddBookForm() {
           <input
             type='text'
             name='bookName'
+            placeholder='Book Name'
             value={bookName}
             onChange={handleNameChange}
             required
