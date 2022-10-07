@@ -29,7 +29,7 @@ function AddBooks() {
       author:author
     
     }
-    fetch(' http://localhost:8001/books', {
+    fetch('http://localhost:8001/books', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
