@@ -21,7 +21,7 @@ The app is working with a json-server as it's backend
 To run it, you need to install json-server
 ```npm install json-server -g```
 then run it 
-``` json-server --watch db.json ```
+``` npx json-server --watch db.json --p 8001```
 
 ### `npm start`
 
