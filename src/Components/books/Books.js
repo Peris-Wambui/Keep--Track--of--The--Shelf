@@ -1,9 +1,9 @@
 import React from "react";
 
-function Book() {
+function Book({book}) {
     return(
         <tr>
-            <td></td>
+            <td>{book.}</td>
             <td></td>
             <td></td>
         </tr>
