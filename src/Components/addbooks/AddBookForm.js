@@ -29,7 +29,7 @@ function AddBookForm() {
       author:author
     
     }
-    fetch('https://keeping-track-of-my-shelf.herokuapp.com/books', {
+    fetch('http://localhost:8001/books', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import AddBookForm from '../addbooks/AddBookForm'
-import Books from '../books/Books'
+import BookList from '../bookList/BookList'
 import SearchBook from '../searchBook/SearchBook'
 
 
@@ -8,7 +8,7 @@ function BookContainer() {
     const [searchBook, setSearchBook]=useState('')
     const [books,setBooks]=useState([])
     useEffect(()=>{
-        fetch("https://keeping-track-of-my-shelf.herokuapp.com/books")
+        fetch("http://localhost:8001/books")
         .then ((response)=>response.json())
         .then((data)=>{
             setBooks(data)
@@ -19,10 +19,10 @@ function BookContainer() {
         setSearchBook(e.target.value)
     }
 
-    // const dispaySearchBook =books.filter((book)=>
-    // book.description.includes (searchBook))
+    const dispaySearchBook =books.filter((book)=>
+    book.description.includes (searchBook))
 
-    // console.log(dispaySearchBook)
+    console.log(dispaySearchBook)
 
     
 
@@ -30,20 +30,7 @@ function BookContainer() {
         <div>
         <SearchBook search ={searchBook} onSearchChange={searchFilteredBook}/>
         <AddBookForm/>
-            {books.filter((book)=>{
-        if(searchBook === ""){
-          return book;
-        }else if(book.name.toLowerCase().includes(searchBook.toLowerCase())){
-          return book;
-        }
-        return false
-      })?.map((dispaySearchBook) => (
-        <Books key={dispaySearchBook.id}  book={dispaySearchBook} />
-      ))}
-
-
-            {/* <BookList 
-            book={dispaySearchBook}/> */}
+        <BookList book={dispaySearchBook}/>
         </div>
     )
 

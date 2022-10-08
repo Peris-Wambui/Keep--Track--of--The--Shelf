@@ -1,7 +1,7 @@
 import React from "react";
-// import Books from "../books/Books";
+import Books from "../books/Books";
 
-function BookList() {
+function BookList({book}) {
    return(
     <table  className='ui celled striped padded table'>
         <tbody>
@@ -16,13 +16,13 @@ function BookList() {
                     <h2 className='ui center aligned header'>Author</h2>
                 </th>
             </tr>
-            {/* {book.map((data)=>(
+            {book.map((data)=>(
                 <Books
                 key={data.id}
                 book={data}
                 />
-            ))} */}
-            
+            ))}
+
         </tbody>
     </table>
    )
