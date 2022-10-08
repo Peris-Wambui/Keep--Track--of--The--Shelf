@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import AddBookForm from '../addbooks/AddBookForm'
-import BookList from '../bookList/BookList'
+import Books from '../books/Books'
 import SearchBook from '../searchBook/SearchBook'
 
 
@@ -19,17 +19,31 @@ function BookContainer() {
         setSearchBook(e.target.value)
     }
 
-    const dispaySearchBook =books.filter((book)=>
-    book.description.toLowerCase().includes (searchBook.toLowerCase()))
+    // const dispaySearchBook =books.filter((book)=>
+    // book.description.includes (searchBook))
 
-    console.log(dispaySearchBook)
+    // console.log(dispaySearchBook)
+
+    
 
     return(
         <div>
-            <SearchBook search ={searchBook} onSearchChange={searchFilteredBook}/>
-            <AddBookForm/>
-            <BookList 
-            book={dispaySearchBook}/>
+        <SearchBook search ={searchBook} onSearchChange={searchFilteredBook}/>
+        <AddBookForm/>
+            {books.filter((book)=>{
+        if(searchBook === ""){
+          return book;
+        }else if(book.name.toLowerCase().includes(searchBook.toLowerCase())){
+          return book;
+        }
+        return false
+      })?.map((dispaySearchBook) => (
+        <Books key={dispaySearchBook.id}  book={dispaySearchBook} />
+      ))}
+
+
+            {/* <BookList 
+            book={dispaySearchBook}/> */}
         </div>
     )
 
